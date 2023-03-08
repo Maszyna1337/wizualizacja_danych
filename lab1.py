@@ -1,3 +1,4 @@
+"""
 a = 'napis \ndrugi'
 print(a)
 b = 2
@@ -49,7 +50,7 @@ print(lista)
 lista.sort()
 print(lista)
 
-slownik = {'a': 2, 1: 2, 4: 'ab', 1: 3}
+slownik = {'a': 2, 1: 2, 4: 'ab'}
 print(slownik)
 print(slownik[4])
 slownik['klucz'] = 'wartosc'
@@ -83,3 +84,51 @@ if a==b:
     print('Liczby są równe')
 else:
     print('Liczby są różne')
+
+a = input('podaj a:')
+b = input('podaj b:')
+c = input('podaj c:')
+d = input('podaj d:')
+a = int(a)
+b = int(b)
+c = int(c)
+d = int(d)
+if (a>b) & (c>d):
+    print('a wieksze od b i c wieksze od d')
+else:
+    print('a jest mniejsze od b lub c jest mniejsze od d')
+
+for x in range(1, 6, 1):
+    print(x)
+else:
+    print('koniec petli')
+
+for x in listy:
+    print(x)
+
+for i in range(0, len(listy)):
+    print(listy[i])
+
+licznik = 0
+while licznik != len(listy):
+    print(listy[licznik])
+    licznik += 1
+
+liczby = [3, 4, 5, 1, 7, 8]
+a = int(input('podaj a'))
+i = 0
+while i != len(liczby):
+    if a - liczby[i] == 0:
+        print('{} - {} = 0'.format(a, liczby[i]))
+        break
+    i += 1
+"""
+liczby = [1, 2, 2, 2, 4, 5, 6]
+i = 0
+while i != len(liczby):
+    if liczby[i] == 2:
+        liczby.pop(i)
+        continue
+    i += 1
+else:
+    print(liczby)
