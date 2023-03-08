@@ -64,12 +64,22 @@ print('a={}, b={}'.format(12, 12))
 napis = 'a={}, b={}'
 print(napis.format(12,12))
 
-#if warunek1:
-    #instrukcja1
+#a = input('podaj a:')
+#b = input('podaj b:')
+#print(a)
+#print(b)
+#print(type(a))
+#a = int(a)
+#if a > b:
+#    print(a)
+#elif a < b:
+#    print(b)
+#else:
+#    print('a=b')
 
 a = input('podaj a:')
 b = input('podaj b:')
-print(a)
-print(b)
-print(type(a))
-a = int(a)
+if a==b:
+    print('Liczby są równe')
+else:
+    print('Liczby są różne')
