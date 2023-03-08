@@ -51,4 +51,14 @@ print(lista)
 
 slownik = {'a': 2, 1: 2, 4: 'ab', 1: 3}
 print(slownik)
+print(slownik[4])
+slownik['klucz'] = 'wartosc'
+print(slownik)
+slownik.pop('klucz')
+print(slownik)
+print(slownik.keys())
+print(slownik.values())
+
+print('a=%(zm)d' % {'zm':12})
+print('a={}, b={}'.format(12, 12))
 
