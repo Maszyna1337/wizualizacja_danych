@@ -1,13 +1,14 @@
 import random
+import math
 #Zadanie 1
 a = [1-x for x in range(1, 10)]
 print(a)
-b = [4**x for x in range(0,8)]
+b = [4**x for x in range(0, 8)]
 print(b)
 c = [x for x in b if x % 2 == 0]
 print(c)
 #Zadanie 2
-a = random.sample(range(1, 100),10)
+a = random.sample(range(1, 100), 10)
 lista = [x for x in a if x % 2 == 0]
 print(lista)
 #Zadanie 3
@@ -32,11 +33,11 @@ def trojkat(a4, b4, c4):
         return -1
 
 
-print(trojkat(17, 8 , 15))
+print(trojkat(17, 8, 15))
 #Zadanie 5
 
 
-def trapez(a5 = 5, b5 = 2, h5 = 3):
+def trapez(a5=5, b5=2, h5=3):
     return ((a5+b5)*h5)/2
 
 
@@ -44,10 +45,10 @@ print(trapez())
 #zadanie 6
 
 
-def ciag(pierwszy = 1, mnoznik = 4, dlugosc = 10):
+def ciag(pierwszy=1, mnoznik=4, dlugosc=10):
     for i in range(pierwszy, dlugosc):
         pierwszy *= mnoznik
-    print(pierwszy)
+    return pierwszy
 
 
 print(ciag())
@@ -55,25 +56,39 @@ print(ciag())
 
 
 def ciag2(* wyra):
-    iloczyn = 1
-    for i in range(1, len(wyra)):
-        4
-    print(iloczyn)
+    item = wyra[0]
+    for i in range(item, len(wyra)):
+        item *= wyra[i]
+    return item
 
 
 print(ciag2(1, 2, 3))
 #Zadanie 8
-lista = {"Jajko": 2.50, "Złoto": 500, "Komputer": 2799.99}
+
+
 def produkty(** lista):
-    cal = 0
-    for i in len(lista):
-        cal += lista.value(i)
-    return cal
-
-print(produkty(lista))
+    nazwa = len(lista)
+    koszt = round(sum(lista.values()), 2)
+    return nazwa, koszt
 
 
+zakupy = {"jajka": 2.50, "chleb": 3.20, "mleko": 1.99, "masło": 4.50}
+ilosc, wartosc = produkty(**zakupy)
+print("Ilość produktów:", ilosc)
+print("Łączna wartość zakupów:", wartosc)
 
+#Zadanie 9
+
+
+def pierwiastek():
+    n = int(input("Podaj liczbe: "))
+    try:
+        print(math.sqrt(n))
+    except ValueError:
+        print("Liczba nie może być ujemna")
+
+
+pierwiastek()
 
 
 
