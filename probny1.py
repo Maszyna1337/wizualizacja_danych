@@ -1,16 +1,16 @@
 import math
 #Zadanie1
-#a = int(input("podaj a: "))
-#b = int(input("podaj b: "))
-#try:
-#   wynik = pow(a, 2)+(a*b)+pow(b, 2)
-#    zadanie1 = open("zadanie1.txt", "a+")
-#    zadanie1.write(str(wynik))
-#    zadanie1.close()
-#except ValueError:
-#    if type(a) or type(b) != float:
-#        print("Nie podano liczb całkowitych")
-#
+a = int(input("podaj a: "))
+b = int(input("podaj b: "))
+try:
+   wynik = pow(a, 2)+(a*b)+pow(b, 2)
+    zadanie1 = open("zadanie1.txt", "a+")
+    zadanie1.write(str(wynik))
+    zadanie1.close()
+except ValueError:
+    if type(a) or type(b) != float:
+        print("Nie podano liczb całkowitych")
+
 #Zadanie2
 
 
