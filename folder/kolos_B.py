@@ -52,9 +52,11 @@ plt.show()
 
 #ZADANIE 4
 
-grupa = df.groupby("Type_of_glass")["Aluminum"].sum()
-plt.pie(grupa, autopct='%.2f%%', textprops={'fontsize': 14})
-plt.title('Całkowite zużycie aluminium dla każdego typu szkła', fontsize=14)
-plt.legend(title='Typ szkła', labels=['Sodium', 'Magnesium', 'Aluminum', 'Silicone', 'Potasium', 'Calcium', 'Brium',
-                                      'Iron'], loc='upper left')
-#plt.show()
+df = pd.read_csv("glass.data")
+df = df.groupby('Type_of_glass')['Aluminum'].sum()
+df.plot(kind='pie', subplots=True, autopct='%.2f %%', fontsize=14, figsize=(6, 6),
+        labels=['Sodium', "Magnesium", "Silicon", "Potassium", 'Calcium', 'Barium', "Iron"])
+plt.legend()
+plt.title("zużycie Aluminium")
+plt.savefig('im_naz_zad4b.png')
+plt.show()
